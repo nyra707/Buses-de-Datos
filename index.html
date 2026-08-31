@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bus de Datos — Blog Robótica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <div class="corner corner-tl" aria-hidden="true"></div>
+  <div class="corner corner-tr" aria-hidden="true"></div>
+  <div class="corner corner-bl" aria-hidden="true"></div>
+  <div class="corner corner-br" aria-hidden="true"></div>
+
+  <header class="titlebar">
+    <h1>Bus de Datos, Direcciones y Control</h1>
+  </header>
+
+  <main class="columns">
+
+    <section class="panel profile-panel" aria-label="Perfil">
+      <div class="seal" aria-hidden="true">✦</div>
+
+      <div class="avatar-frame">
+        <img src="https://cdn.phototourl.com/free/2026-08-18-7bca5ccf-192a-4a15-b0d3-8ba42026e50d.png" alt="Foto de perfil" id="avatarImg">
+      </div>
+
+      <div class="profile-info">
+        <h2 class="profile-name" contenteditable="true" spellcheck="false">Paloma Vega Pavez</h2>
+
+        <dl class="profile-facts">
+          <div class="fact">
+            <dt>Carrera</dt>
+            <dd contenteditable="true" spellcheck="false">Ingeniería en Informática</dd>
+          </div>
+          <div class="fact">
+            <dt>Asignatura</dt>
+            <dd contenteditable="true" spellcheck="false">Introducción a la Programación y Robótica Aplicada</dd>
+          </div>
+          <div class="fact">
+            <dt>Unidad</dt>
+            <dd contenteditable="true" spellcheck="false">Introducción a la Programación y Robótica - Semana 1</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="panel slider-panel" aria-label="Contenido del blog">
+
+      <button class="arrow arrow-left" id="prevBtn" aria-label="Diapositiva anterior">
+        <svg viewBox="0 0 24 24"><path d="M15 4 L7 12 L15 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <div class="slides-viewport">
+        <div class="slides-track" id="slidesTrack">
+
+          <article class="slide">
+            <h3>Introducción</h3>
+            <div class="slide-img"><img src="https://www.alegsa.com.ar/Imagen/thumb600/bus-de.-computadora.webp" alt="Mapa relacionando CPU, Memoria, y Entrada y Salida con Bus de Control, Bus de Dirección, y Bus de Datos"></div>
+            <p>Cada vez que hacemos doble clic en un ícono, abrimos una foto o guardamos un documento, dentro del computador ocurre algo que casi nunca nos detenemos a pensar: la información tiene que viajar. Tiene que salir de algún lugar, pasar por otro, y llegar a un destino específico, todo en fracciones de segundo. Ese viaje no ocurre por arte de magia: ocurre gracias a <strong><em>los buses</em></strong>, un componente de la arquitectura de hardware que, aunque no se ve ni se toca directamente, es responsable de que la CPU, la memoria RAM y los distintos dispositivos puedan "conversar" entre sí.</p><br><br>
+            <p style="font-size: 15px; color: #fc97b7; text-align:center; font-weight:bold;">Alegsa, L. (2025). Definición de bus de control. Alegsa.com.ar. <a href="https://www.alegsa.com.ar/Dic/bus_de_control.php#h0" target="_blank">https://www.alegsa.com.ar/Dic/bus_de_control.php#h0</a></p>
+          </article>
+
+          <article class="slide">
+            <h3>¿Qué es exactamente un bus?</h3>
+            <div class="slide-img"><img src="https://hardzone.es/app/uploads-hardzone.es/2019/10/bus-comunicacion-pcie.jpg?x=480&quality=80" alt="Placa Madre con espacios vacios para Tarjetas RAM"></div>
+            <p>Un bus es, en pocas palabras, un <strong><em>conjunto de líneas</em></strong> o <strong><em>canales de comunicación</em></strong> que conectan distintos componentes de hardware para que puedan transferir información entre sí. Se le llama así porque, igual que un bus de transporte público, su función es trasladar algo (en este caso, datos) de un punto a otro dentro del sistema.<br><br>
+            Sin buses, la CPU sería como un cerebro sin sistema nervioso. Podría "pensar", pero no tendría forma de enviar ni recibir información del resto del cuerpo.</p><br><br>
+            <p style="font-size: 15px; color: #fc97b7; text-align:center; font-weight:bold;">Grafica Mazzini. (s. f.). Buses de datos, dirección y control: la espina dorsal de la computación. <a href="https://www.graficamazzini.com.ar/bus-de-datos-direccion-y-control-grafica/" target="_blank">https://www.graficamazzini.com.ar/bus-de-datos-direccion-y-control-grafica/</a></p>
+          </article>
+
+          <article class="slide">
+            <h3>Tipos de Buses</h3>
+            <div class="slide-img"><img src="https://blogarquitectura2013.wordpress.com/wp-content/uploads/2013/11/fdxhgh.jpg" alt="Mapa relacionando CPU, Memoria, y Entrada y Salida con Bus de Control, Bus de Dirección, y Bus de Datos"></div>
+            <p>Dentro de un computador existen <strong><em>tres</em></strong> buses principales, y cada uno cumple una función bien específica.<br><br>
+            <strong><em>★ Bus de direcciones:</em></strong> Le dice a la CPU dónde está o dónde debe guardarse un dato específico dentro de la memoria. Este bus viaja en un solo sentido, porque es siempre la CPU quien decide qué dirección consultar.<br><br>
+            <strong><em>★ Bus de datos:</em></strong> Es el contenido que realmente se está transportando. A diferencia del bus de direcciones, este funciona en ambos sentidos, ya que la CPU tanto puede leer información desde la memoria como escribir información hacia ella.<br><br>
+            <strong><em>★ Bus de control:</em></strong> Son las instrucciones que acompañan el envío. Si se trata de una lectura o una escritura, cuándo debe ejecutarse la operación, o si hay algún error que reportar. Es el que coordina que todo el proceso ocurra en el orden correcto.<br><br></p>
+            <p style="font-size: 15px; color: #fc97b7; text-align:center; font-weight:bold;">IEDA. (s. f.). 2.2. Buses de comunicación: datos, control y direcciones [Recurso educativo]. Junta de Andalucía. <a href="https://edea.juntadeandalucia.es/bancorecursos/file/723e3014-72d8-4466-82b9-4a152e3cff5a/1/es-an_2018090712_9123551.zip/22_buses_de_comunicacin_datos_control_y_direcciones.html?temp.hn=true&temp.hb=true" target="_blank">https://edea.juntadeandalucia.es/bancorecursos/file/723e3014-72d8-4466-82b9-4a152e3cff5a/1/es-an_2018090712_9123551.zip/22_buses_de_comunicacin_datos_control_y_direcciones.html</a></p>
+          </article>
+
+          <article class="slide">
+            <h3>EL ancho de Bus y su relación con el rendimiento</h3>
+            <div class="slide-img"><img src="https://www.retromaquinitas.com/wp-content/uploads/2013/01/shutterstock_311463287.webp" alt="Pantalla con Bits representados por Ceros y Unos"></div>
+            <p>Un dato técnico que vale la pena destacar es el ancho de bus, es decir, la cantidad de líneas físicas que lo componen. <strong><em>Mientras más ancho es un bus, más bits puede transportar al mismo tiempo</em></strong>, lo que se traduce directamente en mayor velocidad y mejor rendimiento. Además, el ancho del bus de direcciones determina la cantidad máxima de memoria que un procesador puede reconocer y utilizar.<br><br>
+            Esto explica, por ejemplo, por qué la diferencia entre un sistema de 32 bits y uno de 64 bits no es solo un número: define cuánta información puede moverse por ciclo y cuánta memoria puede administrar el equipo.</p><br><br>
+            <p style="font-size: 15px; color: #fc97b7; text-align:center; font-weight:bold;">Departament d'Arquitectura de Computadors. (2004). Arquitectura del PC: Buses, conectores, cables [Diapositivas]. Facultat d'Informàtica de Barcelona, Universitat Politècnica de Catalunya. <a href="https://people.ac.upc.es/cruz/docs/p2-BusesExpansion.pdf" target="_blank">https://people.ac.upc.es/cruz/docs/p2-BusesExpansion.pdf</a></p>
+          </article>
+
+          <article class="slide">
+            <h3>De Bus Paralelo a Bus Serie</h3>
+            <div class="slide-img"><img src="https://m.media-amazon.com/images/I/61Pca1sHPVL._AC_UF894,1000_QL80_.jpg" alt="USB, PCI, SATA"></div>
+            <p>Durante mucho tiempo, los computadores usaron buses paralelos, donde varios bits viajaban al mismo tiempo por líneas separadas. Funcionaba bien a corta distancia, pero a mayor velocidad, las señales empezaban a interferir entre sí, lo que limitaba qué tan rápido y qué tan lejos podían viajar los datos.<br><br>
+            La solución fue pasar a buses en serie, donde los bits viajan uno detrás de otro, pero a velocidades mucho más altas. En la práctica permitió transmitir información más rápido, con menos interferencia y a mayores distancias. Así nacieron los estándares que probablemente todos hemos usado sin saberlo:<br><br>
+            <strong><em>★ USB (Universal Serial Bus):</em></strong> Para conectar teclados, mouse, pendrives y casi cualquier periférico externo.<br><br>
+            <strong><em>★ SATA:</em></strong> Conecta discos duros y unidades SSD a la placa base.<br><br>
+            <strong><em>★ PCI Express (PCIe):</em></strong> Conecta tarjetas gráficas y unidades de almacenamiento de alta velocidad.</p><br><br>
+            <p style="font-size: 15px; color: #fc97b7; text-align:center; font-weight:bold;">Sole, R. (2019, octubre 12). PCIe, SATA y USB: así son y funcionan los buses de datos de tu PC. HardZone. <a href="https://hardzone.es/reportajes/que-es/bus-datos-pc-cuales/" target="_blank">https://hardzone.es/reportajes/que-es/bus-datos-pc-cuales/</a></p>
+          </article>
+
+          <article class="slide">
+            <h3>Para finalizar...</h3>
+            <div class="slide-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUG-YSUkQ4wDGcPRYwe1XxqpOZFzGLaOcfRaiGUjfbvScrNi7m1t0kSJQ&s=10" alt="Buses de Datos"></div>
+            <p>Los buses son un buen ejemplo de algo que pasa mucho en tecnología: los conceptos más "invisibles" suelen ser los que sostienen todo lo demás. No vemos el bus de datos cuando abrimos una aplicación, pero sin él, ni la CPU más potente ni la memoria RAM más rápida servirían de nada, porque no tendrían cómo comunicarse entre sí.<br><br>
+            Entender esto también ayuda a leer con otros ojos las especificaciones técnicas de un computador: cuando alguien menciona que un equipo tiene "PCIe 4.0" o "USB 3.2", ya no es solo un nombre en una ficha técnica, sino una pista sobre qué tan rápido puede viajar la información dentro de esa máquina.</p>
+          </article>
+
+        </div>
+      </div>
+
+      <button class="arrow arrow-right" id="nextBtn" aria-label="Diapositiva siguiente">
+        <svg viewBox="0 0 24 24"><path d="M9 4 L17 12 L9 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <div class="dots" id="dots" role="tablist" aria-label="Selector de diapositiva"></div>
+    </section>
+
+  </main>
+
+  <footer class="pagefoot">☆ Blog con fines educativos ☆</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
